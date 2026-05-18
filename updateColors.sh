@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 # --- Configuration ---
 # Use environment variables (you can also set these in the systemd service-file) or default
