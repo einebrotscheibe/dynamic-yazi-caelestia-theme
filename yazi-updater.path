@@ -1,0 +1,9 @@
+[Unit]
+Description=Watch caelestia scheme for changes
+
+[Path]
+# triggers when the file is written to
+PathModified=%h/.local/state/caelestia/scheme.json
+
+[Install]
+WantedBy=paths.target

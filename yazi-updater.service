@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs the yazi theme updater when a file changes
+
+[Service]
+Type=oneshot
+Environment="YAZI_CONFIG_DIR=%h/.config/yazi"
+ExecStart=%h/.config/yazi/updateColors.sh
+
+[Install]
+WantedBy=default.target

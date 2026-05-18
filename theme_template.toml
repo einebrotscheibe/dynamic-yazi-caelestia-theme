@@ -1,0 +1,253 @@
+# App {{{
+
+[app]
+overall = { fg = "{{PRIMARY}}", bg = "{{BG}}" }
+
+# }}}
+
+
+# Manager {{{
+
+[mgr]
+cwd = { fg = "{{ACCENT}}" }
+
+# Find
+find_keyword  = { fg = "{{ACCENT}}", bold = true, italic = true, underline = true }
+find_position = { fg = "{{PRIMARY}}", bg = "{{BG}}", bold = true, italic = true }
+
+# Symlink
+symlink_target = { fg = "{{FG}}", italic = true }
+
+# Marker
+marker_copied   = { fg = "{{PRIMARY}}", bg = "{{PRIMARY}}" }
+marker_cut      = { fg = "{{ACCENT}}", bg = "{{ACCENT}}" }
+marker_marked   = { fg = "{{ACCENT}}", bg = "{{ACCENT}}" }
+marker_selected = { fg = "{{ACCENT}}", bg = "{{ACCENT}}" }
+marker_symbol   = "│"
+
+# Count
+count_copied   = { fg = "{{FG}}", bg = "{{BG}}" }
+count_cut      = { fg = "{{FG}}", bg = "{{BG}}" }
+count_selected = { fg = "{{FG}}", bg = "{{BG}}" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "{{FG}}" }
+
+# Highlighting
+syntect_theme = "~/.config/yazi/theme/current_syntect.tmTheme"
+# }}}
+
+
+# Tabs {{{
+
+[tabs]
+active   = { fg = "{{PRIMARY}}", bg = "{{BG}}", bold = true }
+inactive = { fg = "{{FG}}", bg = "{{BG}}" }
+
+# Separator
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+# }}}
+
+
+# Mode {{{
+
+[mode]
+normal_main = { fg = "{{BG}}", bg = "{{PRIMARY}}", bold = true }
+normal_alt  = { fg = "{{PRIMARY}}", bg = "{{BG}}" }
+
+# Select mode
+select_main = { fg = "{{BG}}", bg = "{{ACCENT}}", bold = true }
+select_alt  = { fg = "{{ACCENT}}", bg = "{{BG}}" }
+
+# Unset mode
+unset_main = { fg = "{{BG}}", bg = "{{ACCENT}}", bold = true }
+unset_alt  = { fg = "{{ACCENT}}", bg = "{{BG}}" }
+
+# }}}
+
+
+# Indicator of hovered file {{{
+
+[indicator]
+parent  = { reversed = true, fg = "{{PRIMARY}}" }
+current = { reversed = true, fg = "{{PRIMARY}}" }
+preview = { underline = true, fg = "{{PRIMARY}}" }
+padding = { open = "", close = "" }
+
+# }}}
+
+
+# Status bar {{{
+
+[status]
+overall   = { fg = "{{FG}}", bg = "{{BG}}" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Permissions
+perm_sep   = { fg = "{{FG}}" }
+perm_type  = { fg = "{{ACCENT}}" }
+perm_read  = { fg = "{{ACCENT}}" }
+perm_write = { fg = "{{ACCENT}}" }
+perm_exec  = { fg = "{{ACCENT}}" }
+
+# Progress
+progress_label  = { bold = true }
+progress_normal = { fg = "{{ACCENT}}", bg = "{{BG}}" }
+progress_error  = { fg = "{{ACCENT}}", bg = "{{BG}}" }
+
+# }}}
+
+
+# Which {{{
+
+[which]
+cols            = 3
+mask            = { bg = "{{BG}}" }
+cand            = { fg = "{{ACCENT}}" }
+rest            = { fg = "{{FG}}" }
+desc            = { fg = "{{PRIMARY}}" }
+separator       = "  "
+separator_style = { fg = "{{FG}}" }
+
+# }}}
+
+
+# Confirmation {{{
+
+[confirm]
+border     = { fg = "{{PRIMARY}}" }
+title      = { fg = "{{PRIMARY}}" }
+body       = { fg = "{{FG}}" }
+list       = { fg = "{{FG}}" }
+btn_yes    = { reversed = true, fg = "{{PRIMARY}}" }
+btn_no     = { fg = "{{FG}}" }
+btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+
+# }}}
+
+
+# Spotter {{{
+
+[spot]
+border = { fg = "{{PRIMARY}}" }
+title  = { fg = "{{PRIMARY}}" }
+
+# Table
+tbl_col  = { fg = "{{FG}}" }
+tbl_cell = { fg = "{{ACCENT}}", reversed = true }
+
+# }}}
+
+
+# Notification {{{
+
+[notify]
+title_info  = { fg = "{{ACCENT}}" }
+title_warn  = { fg = "{{ACCENT}}" }
+title_error = { fg = "{{ACCENT}}" }
+
+# Icons
+icon_info  = ""
+icon_warn  = ""
+icon_error = ""
+
+# }}}
+
+
+# Picker {{{
+
+[pick]
+border   = { fg = "{{PRIMARY}}" }
+active   = { fg = "{{PRIMARY}}", bold = true }
+inactive = { fg = "{{FG}}" }
+
+# }}}
+
+
+# Input {{{
+
+[input]
+border   = { fg = "{{PRIMARY}}" }
+title    = { fg = "{{FG}}" }
+value    = { fg = "{{FG}}" }
+selected = { reversed = true, fg = "{{PRIMARY}}" }
+
+# }}}
+
+
+# Completion {{{
+
+[cmp]
+border   = { fg = "{{PRIMARY}}" }
+active   = { reversed = true, fg = "{{PRIMARY}}" }
+inactive = { fg = "{{FG}}" }
+
+# Icons
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+# }}}
+
+
+# Task manager {{{
+
+[tasks]
+border  = { fg = "{{PRIMARY}}" }
+title   = { fg = "{{FG}}" }
+hovered = { fg = "{{PRIMARY}}", bold = true }
+
+# }}}
+
+
+# Help menu {{{
+
+[help]
+on      = { fg = "{{ACCENT}}" }
+run     = { fg = "{{PRIMARY}}" }
+desc    = { fg = "{{FG}}" }
+hovered = { reversed = true, bold = true, fg = "{{PRIMARY}}" }
+footer  = { fg = "{{BG}}", bg = "{{FG}}" }
+
+# }}}
+
+
+# File-specific styles {{{
+
+[filetype]
+rules = [
+	# directories
+	{ url = "*/", fg = "{{PRIMARY}}"},
+    # files
+	{ url = "*", fg = "{{PRIMARY}}"}
+]
+
+# }}}
+
+
+# Icons: {{{
+
+[icon]
+conds = [
+	# Special files
+	{ if = "orphan", text = ""},
+	{ if = "link", text = ""},
+	{ if = "sticky", text = ""},
+
+	# Fallback
+	{ if = "dir & hovered", text = "", fg = "{{PRIMARY}}"},
+	{ if = "dir", text = "", fg = "{{PRIMARY}}"},
+	{ if = "exec", text = "", fg = "{{PRIMARY}}"},
+	{ if = "!dir", text = "", fg = "{{PRIMARY}}"}
+]
+
+globs = []
+dirs  = []
+files = []
+exts = []
+
+# }}}
