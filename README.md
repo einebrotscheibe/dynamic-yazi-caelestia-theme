@@ -96,4 +96,5 @@ You can tweak the look of the theme by editing `theme_template.toml`. The syntax
 
 ---
 
-Enjoy your dynamic setup!:3
+Enjoy your dynamic setup!
+:3
