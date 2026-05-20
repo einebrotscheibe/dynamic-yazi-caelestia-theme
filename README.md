@@ -14,7 +14,7 @@ A dynamic, automated theme engine for the **[yazi](https://github.com/sxyazi/yaz
 
 ## Prerequisites
 
-- **`yazi`* — The terminal file manager.
+- **`yazi`** — The terminal file manager.
 - **`jq`** — Used to parse your color scheme JSON.
 - **`systemd`** — Required for the automated path-watching functionality.
 
